@@ -1,7 +1,7 @@
 pipeline(
     agent{
         docker{
-            image 'python: 3.9'
+            image 'python:3.9'
         }
     }
     stages{
@@ -14,7 +14,7 @@ pipeline(
         }
         stage('Test'){
             steps{
-                sh '. venv/bin/activate'
+                sh '.venv/bin/activate'
                 sh 'pytest'
             }
         }
